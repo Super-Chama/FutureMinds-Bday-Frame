@@ -44,9 +44,8 @@ window.updatePreview = function(url) {
     document.getElementById("pic").setAttribute("src", imageData);
     html2canvas($("#preview2")[0]).then(function(canvas) {
       $("#img-out").append(canvas);
+      Canvas2Image.saveAsPNG(canvas);
     });
-    var canvasDown = document.querySelector("#preview2 canvas");
-    Canvas2Image.saveAsJPEG(canvasDown, 400, 400);
   };
   //document.getElementById("download").removeAttribute("disabled");
 };
