@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>FM Image overlay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="cropper.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="jquery-3.2.1.slim.js"></script>
+  <script src="cropper.min.js"></script>
+  <script src="html2canvas.min.js"></script>
+  <script src="app.js"></script>
+  <script src="canvas2image.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <h1>
+        FM Image maker
+      </h1>
+      <p>Easy generate image frame</p>
+    </div>
+    <div class="container" id="content">
+      <div id="uploadSection">
+        <h2>Upload Photo</h2>
+        <input type="file" name="file" onchange="onFileChange(this)">
+      </div>
+      <div id="preview">
+        <div id="crop-area">
+          <img src="img/person.png" id="profile-pic">
+        </div>
+        <img src="img/dp-fg.png" id="fg" data-design="">
+      </div>
+      <div id="preview2">
+        <div id="cropped-area">
+          <img src="" id="pic">
+        </div>
+        <img src="img/dp-fg.png" id="fg" data-design="">
+      </div>
+      <p id="afterActions">
+        <button id="btnSave" class="btn">Download Picture</button>
+      </p>
+      <h2>Design</h2>
+      <div id="designs">
+        <img class="design active" src="img/dp-fg.png" data-design="">
+        <img class="design" src="img/dp-fg-1.png" data-design="1">
+        <img class="design" src="img/dp-fg-2.png" data-design="2">
+      </div>
+      <div id="img-out"></div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
