@@ -36,6 +36,7 @@ window.updatePreview = function(url) {
   });
   $("#afterActions").show();
   document.getElementById("btnSave").onclick = function() {
+    document.getElementById("preview2").style.display = "inline-block";
     var imageData = cropper
       .getCroppedCanvas({ width: 400, height: 400 })
       .toDataURL();
@@ -44,7 +45,10 @@ window.updatePreview = function(url) {
     document.getElementById("pic").setAttribute("src", imageData);
     html2canvas($("#preview2")[0]).then(function(canvas) {
       $("#img-out").append(canvas);
-      Canvas2Image.saveAsPNG(canvas, 400, 400, "Image");
+      //Canvas2Image.saveAsPNG(canvas, 400, 400, "Image");
+      $("#img-out")
+        .get(0)
+        .scrollIntoView();
     });
   };
   //document.getElementById("download").removeAttribute("disabled");
