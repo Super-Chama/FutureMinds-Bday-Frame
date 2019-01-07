@@ -38,7 +38,7 @@ window.updatePreview = function(url) {
   document.getElementById("btnSave").onclick = function() {
     document.getElementById("preview2").style.display = "inline-block";
     var imageData = cropper
-      .getCroppedCanvas({ width: 400, height: 400 })
+      .getCroppedCanvas({ width: 600, height: 600 })
       .toDataURL();
     //document.getElementById("profile-pic").src = imageData;
     //console.log(imageData);
@@ -74,6 +74,9 @@ window.onFileChange = function(input) {
 $(document).ready(function() {
   $(".design").on("click", function() {
     $("#fg")
+      .attr("src", $(this).attr("src"))
+      .data("design", $(this).data("design"));
+    $("#fg2")
       .attr("src", $(this).attr("src"))
       .data("design", $(this).data("design"));
     $(".design.active").removeClass("active");

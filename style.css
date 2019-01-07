@@ -79,8 +79,8 @@ h1 a[href] {
 #preview2 {
   position: relative;
   display: none;
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 600px;
   background: #fff;
   margin-left: 10px;
 }
@@ -97,6 +97,15 @@ h1 a[href] {
   width: 100%;
 }
 #fg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+#fg2 {
+  width: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
